@@ -1,3 +1,4 @@
+// Optimal Approach
 class Solution {
     public void moveZeroes(int[] nums) {
         int n = nums.length;
@@ -20,6 +21,27 @@ class Solution {
     }
 }
 
+// Brute force solution
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int n = arr.length;
+        int[] temp = new int[n];
+        int index = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0) {
+                temp[index] = arr[i];
+                index++;
+            }
+        }
+        for (int i = 0; i < temp.length; i++) {
+            arr[i] = temp[i];
+        }
+        for (int i = index; i < n; i++) {
+              arr[i]=0;
+        }
+    
+        }
+    }
 
 // Synced seamlessly with LeetHub Pro
 // Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
