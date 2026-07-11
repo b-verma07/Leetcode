@@ -12,7 +12,7 @@ class Solution {
                 if (count == 1)
                     return nums[i] ;
         }
-        return -1;
+        return 0;
     }
 }
 
