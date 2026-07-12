@@ -1,3 +1,4 @@
+//Optimal approach
 class Solution {
     public int maxSubArray(int[] nums) {
         int n = nums.length;
@@ -8,6 +9,23 @@ class Solution {
             sum =Math.max(sum , isum);
         }
         return sum;
+    }
+}
+
+
+//Brute force & time limit exceed
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int maxi = Integer.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            int sum = 0;
+            for (int j = i; j < nums.length; j++) {
+
+                sum += nums[j];
+                maxi = Math.max(sum, maxi);
+            }
+        }
+        return maxi;
     }
 }
 
